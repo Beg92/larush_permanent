@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="about-styles.css">
-    <title>About Ceren</title>
     <style>
         body {
             display: flex;
@@ -39,67 +38,72 @@
 
         #content {
             display: flex;
-            width: 100%;
-            justify-content: center;
+            flex-direction: column; /* Adjust to column layout */
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
         }
+
         nav ul {
-    list-style-type: none;
-    display: flex;
-}
+            list-style-type: none;
+            display: flex;
+            margin-top: 20px; /* Add space between nav and content */
+        }
 
-nav ul li {
-    margin-right: 20px;
-}
+        nav ul li {
+            margin-right: 20px;
+        }
 
-nav a {
-    text-decoration: none; 
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease; 
-}
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
 
-nav a:hover {
-    color: #ff69b4; /* Change color on hover */
-}
+        nav a:hover {
+            color: #ff69b4;
+        }
 
         #left-column {
-            flex: 1;
             padding-right: 20px;
             box-sizing: border-box;
-        }
-        #left-column h1 {
-            font-size: 2em; /* Adjust the heading font size as needed */
             text-align: center;
+            margin-bottom: 20px; /* Add space between text and image on mobile */
+        }
+
+        #left-column h1 {
+            font-size: 2em;
         }
 
         #left-column p {
-            margin-bottom: 20px; /* Add space between paragraphs */
-            line-height: 1.5; /* Adjust the line height for better readability */
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
-
         #right-column {
-            flex: 1;
             box-sizing: border-box;
         }
 
         #right-column img {
-            width: 55%;
+            width: 50%; 
             border-radius: 50%;
-            margin-left: 50px;
+        }
+        .center{
+            display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
         }
 
         footer {
-         
             padding: 5px;
             background-color: #f5f5f5;
             text-align: center;
         }
     </style>
+    <title>About Ceren</title>
 </head>
 
 <body>
@@ -127,7 +131,7 @@ nav a:hover {
         </div>
 
         <div id="right-column">
-            <img src="../img/ceren1.png" alt="Ceren's Picture">
+            <img src="../img/ceren1.png" alt="Ceren's Picture" class="center">
         </div>
     </div>
 

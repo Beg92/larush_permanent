@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="services-styles.css">
     <style>
-      body {
+        body {
             display: flex;
             margin: 0;
             padding: 0;
@@ -22,57 +23,72 @@
         }
 
         nav ul {
-    list-style-type: none;
-    display: flex;
-}
+            list-style-type: none;
+            display: flex;
+        }
 
-nav ul li {
-    margin-right: 20px;
-}
+        nav ul li {
+            margin-right: 20px;
+        }
 
-nav a {
-    text-decoration: none; /* Remove underline */
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease; /* Add smooth color transition */
-}
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
 
-nav a:hover {
-    color: #ff69b4; /* Change color on hover */
-}
+        nav a:hover {
+            color: #ff69b4;
+        }
 
         section {
-            text-align: left;
-            max-width: 800px; /* Adjust the max-width to make the box smaller */
-            margin: 20px auto; 
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.5); 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-            border-radius: 10px; 
-            margin-bottom: 50px;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
         }
-        h1{
+
+        .service-box {
+             float: left;
+             width: 33.33%;
+            padding: 10px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             text-align: center;
         }
-        h1, h2 {
-            color: #555; /* Set your desired heading color */
+        .services:after {
+       content: "";
+       display: table;
+       clear: both;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
 
         p {
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         footer {
-            background-color: #f2f2f2; 
-            padding: 5px;
-            bottom: 0;
+            padding-top: 5px;
+            background-color: #f5f5f5;
+            text-align: center;
+            width: 100%;
+            margin-bottom: -25px;
         }
     </style>
-   
     <title>Services</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -89,35 +105,40 @@ nav a:hover {
     </header>
 
     <section id="services">
-        <h1>Our Services</h1>
-        <h2>Permanent Eyebrows</h2>
-        <p>Enhance your natural beauty with our expertly crafted permanent eyebrow services. 
-            Whether you desire a subtle enhancement or a bold, defined look, our skilled artists use precision 
-            techniques to create eyebrows that perfectly complement your facial features. Forget the hassle 
-            of daily eyebrow maintenance and wake up every day with flawless, long-lasting brows.</p>
-        <h2>Permanent Eyebrow Removal</h2>
-        <p>Say goodbye to unwanted eyebrow 
-            tattoos or pigment discoloration with our professional eyebrow
-             removing services. Our trained technicians use advanced techniques to safely 
-             and effectively remove or correct previous eyebrow tattooing. We understand that 
-             personal style preferences may change over time, and we're here to help you achieve the 
-             clean and natural look you desire.</p>
-        <h2>Lip Tattoo</h2>
-        <p>Experience the allure of perfectly defined and colored lips with our lip tattoo services.
-             Whether you're looking for a subtle lip tint or a bolder, more vibrant color, our skilled artists 
-             can create a customized lip tattoo that enhances your natural beauty. 
-             Enjoy long-lasting, smudge-proof lip color that saves you time and boosts your confidence.</p>
+        <div class="service-box">
+            <h2>Permanent Eyebrows</h2>
+            <p>Enhance your natural beauty with our expertly crafted permanent eyebrow services, achieving flawless and long-lasting brows that complement your facial features.</p>
+        </div>
 
-        <p>At <strong>Larush Beauty</strong>, we pride ourselves on delivering exceptional and personalized services to help you achieve 
-            the look you've always dreamed of. Book a consultation with our experienced team to discuss your preferences and discover the
-             transformative possibilities of permanent makeup.</p>
+        <div class="service-box">
+            <h2>Permanent Eyebrow Removal</h2>
+            <p>Say goodbye to unwanted eyebrow tattoos or pigment discoloration with our professional eyebrow removal services, using advanced techniques to achieve a clean and natural look.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Lip Tattoo</h2>
+            <p>Experience the allure of perfectly defined and colored lips with our lip tattoo services, offering a range from subtle lip tints to bold, vibrant colors for long-lasting, smudge-proof lip enhancement.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Eyebrow and Eyelash Lamination</h2>
+            <p>Transform your look with our eyebrow and eyelash lamination services, providing a meticulous approach to enhance and define your eyebrows and eyelashes for a captivating appearance.</p>
+        </div>
+
+        <div class="service-box">
+            <h2>Additional Services</h2>
+            <p><em>COMING SOON!.</em></p>
+        </div>
+
+        <div class="service-box">
+            <h2>Consultation</h2>
+            <p>Book a consultation with our experienced team to discuss your preferences and discover the transformative possibilities of permanent makeup tailored to your individual style.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; Copyright 2024 | Larush Beauty</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

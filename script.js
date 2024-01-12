@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Glide.js with default perView value (3 images)
     const glide = new Glide('.glide', {
         type: 'carousel',
         perView: 3,
@@ -6,6 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     glide.mount();
+
+    // Update perView option based on screen width
+    function updatePerView() {
+        glide.update({
+            perView: window.innerWidth < 768 ? 2 : 3, // Adjust the breakpoint (768px) as needed
+        });
+    }
+
+    // Call the function initially and on window resize
+    updatePerView();
+    window.addEventListener('resize', updatePerView);
 
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -15,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.glide__slide img').forEach((img) => {
         img.addEventListener('click', function () {
             modal.style.display = 'block';
-            modalImage.src = this.getAttribute('data-image');
+            modalImage.src = this.src;
         });
     });
 
